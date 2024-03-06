@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+}
+
+.grid-container {
+    display: grid;
+    background-color: grey;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    gap: 10px; /* Gap between grid items */
+    padding: 20px;
+    width: 300px;
+    border: solid;
+    border-radius: 10px;
+}
+
+.rectangle {
+    grid-column: 1 / span 3; /* Rectangle spans 2 columns */
+    grid-row: 1; /* First row */
+    background-color: lightgrey;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.square {
+    grid-column: 4; /* Square in the third column */
+    grid-row: 1; /* First row */
+}
+
+.number-decimal {
+    background-color: lightblue;
+}
+
+.arithmetic, .equal {
+    background-color: lightgreen;
+}
+
+.clear {
+    background-color: orange;
+}
+
+.grid-item {
+    border: solid 3px;
+}
+
+/* Styling for evenly sized squares in the last four rows */
+.grid-container > button:nth-child(n + 2) {
+    /* background-color: orange; */
+    aspect-ratio: 1; /*Maintain square aspect ratio*/
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+
+/* div > div, .square {
+    border-radius: 10%;
+} */
